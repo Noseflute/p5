@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js'></script>
+    <style>
+      /*body {
+        margin: 0;
+      }*/
+    </style>
+  </head>
+  <body>
+    <script>
+      var vw = window.innerWidth;
+      var vh = window.innerHeight;
+      
+      function setup() {
+        //createCanvas(400,400);
+        createCanvas(vw, vh, WEBGL);
+        //background('black');
+      }
+      
+      function draw() {
+        //if (mouseIsPressed) {
+          var r = random (256);
+          var g = random (256);
+          var b = random (256);
+          
+          fill(color(r, g, b));
+          //strokeWeight(5);
+          //frameRate(10);
+        //}
+        //else {
+          //noFill();
+          //strokeWeight(0);
+        //}
+        //ellipse(mouseX, mouseY, random(10,50), random(10,50));
+        //ellipse(mouseX, mouseY, r, r);
+        //ellipse(random(window.innerWidth), random(window.innerHeight), r, r);
+        //ellipse(random(vw), random(vh), r, r);
+                
+        //torus
+        background(200);
+        rotateX(frameCount * 0.01);
+        rotateY(frameCount * 0.01);
+        torus((100),(150));
+        }
+    </script>
+  </body>
+</html>
